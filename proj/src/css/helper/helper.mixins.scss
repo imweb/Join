@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+@mixin noborder() {
+	border: none!important;
+	border-width: 0px!important;
+	border-color:#fff!important;
+}
+
+@mixin nofont() {
+	line-height: 0;
+	font-size: 0;
+	text-indent: -9999px;
+	overflow: hidden;
+	//height: 0;
+}
+
+@mixin ellipsis() {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	word-wrap: normal;
+}
+@mixin line-ellipsis($line){
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+}
+@mixin min-height($height) {
+	min-height: $height;
+	height: auto !important;
+	@if $legacy-support-for-ie {
+		_height: $height;
+	}
+}
+
+@mixin max-height($height) {
+	max-height: $height;
+	height: auto !important;
+	@if $legacy-support-for-ie {
+		_height: $height;
+	}
+}
+
+@mixin min-width($width) {
+	min-width: $width;
+	width: auto !important;
+	@if $legacy-support-for-ie {
+		_width: $width;
+	}
+}
+
+@mixin max-width($width) {
+	max-width: $width;
+	width: auto !important;
+	@if $legacy-support-for-ie {
+		_width: $width;
+	}
+}
+
+@mixin word-break() {
+	white-space: normal;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+@mixin border($border-radius, $width, $height) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: $width;
+	height: $height;
+	border: 1px solid #000;
+	@if $border-radius {
+		@include border-radius($border-radius);
+	}
+	@include opacity(0.1);
+}
+
+@mixin background-color($default, $advanced) {
+	background-color: $default \9;
+	background-color: $advanced;
+}
+
+@mixin btn($border-radius: $btn-border-radius) {
+	margin-bottom: 0; // input button
+	cursor: pointer;
+	border: 1px solid transparent;
+	overflow: hidden;
+	font-size: $btn-font-size;
+	text-align: center;
+	vertical-align: middle;
+	@include border-radius($border-radius);
+	@include user-select(none);	
+	@include inline-block;
+}
+
+@mixin btn-size($width, $height, $line-height) {
+	width: $width;
+	height: $height;
+	line-height: $line-height;
+}
+
+@mixin ico-base($type, $size) {
+	background: url(../img/ico-#{$type}-#{$size}.png) no-repeat;
+	_background: url(../img/ico-#{$type}-#{$size}-ie6.png) no-repeat;
+}
+
+@mixin ico($type, $size) {
+
+	background: url(../img/ico-#{$type}-#{$size}.png) no-repeat;
+	_background: url(../img/ico-#{$type}-#{$size}-ie6.png) no-repeat;
+
+	@if $size==large{
+		width: 36px;
+		height: 36px;
+	}
+	@if $size==normal{
+		width: 24px;
+		height: 24px;
+	}
+	@if $size==small{
+		width: 14px;
+		height: 14px;
+	}
+
+	display:block;
+	float: left;
+	margin-top: 4px;
+}
+
+@mixin mask() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	.mask-bg,
+	.mask-cont {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 14px;
+	}
+	.mask-bg{
+		background: #000;
+		opacity: 0.4;
+		filter: alpha(opacity=40);
+	}
+}
+
+@mixin play-ico($size) {
+	display: block;
+	@if $size==large{
+		width: 98px;
+    	height: 98px;
+    	margin: -49px auto auto -49px;
+	}
+	@else if $size==normal{
+		width: 62px;
+        height: 62px;
+        margin: -31px auto auto -31px;
+	}
+	@else if $size==small{
+		width: 26px;
+        height: 26px;
+        margin: -13px auto auto -13px;
+	}
+    background-image: url(../img/play_icon_#{$size}.png);
+    _background-image: none;
+	_filter:progid:dximagetransform.microsoft.alphaimageloader(src="../img/play_icon_#{$size}.png",sizingmethod="scale"); 
+	background-position:center center;
+    background-repeat:no-repeat ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer; 
+}

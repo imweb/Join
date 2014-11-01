@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+// Typography
+// Font, color for body text, headings
+
+// @TODO: 先移过来, 待review...蛋疼的colorxx
+$colora0:#a0a0a0;
+$color85:#858585;
+
+$font-family-base:"Hiragino Sans GB", "Microsoft Yahei", arial,\5b8b\4f53, "Helvetica Neue", Helvetica, STHeiTi, sans-serif !default;
+$font-default-size: 12px;
+$font-size-base: 14px !default;
+// text color
+$color-title: #333333 !default;
+$color-subtitle: #666666 !default;
+$color-weak: #999999 !default;
+// link color
+$color-link: #039ae3 !default;
+$color-link-hover: #62b4f7 !default;
+$color-link-active: #006eb1 !default;
+// table link color
+$color-table-link: #3672a2 !default;
+$color-table-link-hover: #0d80d7 !default;
+$color-table-link-active: #2f658f !default;
+// other
+$color-error: #e80808 !default;
+$color-warning: #e85308 !default;
+
+// link transtion
+$link-transtion: .3s;
+
+// Buttons
+$btn-font-size: 14px !default;
+$btn-border-radius: 2px !default;
+// default button
+$btn-default-bg-color: #04acf7;
+$btn-default-color: #ffffff;
+$btn-default-bg-color-hover: #04bbf7;
+$btn-default-bg-color-active: #038dcc;
+$btn-default-color-disabled: $color-weak;
+$btn-default-bg-color-disabled: #e3e3e3;
+// weak button
+$btn-weak-bg-color: #f3f3f3;
+$btn-weak-color: #000000;
+$btn-weak-bg-color-hover: #ffffff;
+$btn-weak-bg-color-active: #dcdcdc;
+$btn-weak-color-disabled: $color-weak;
+$btn-weak-bg-color-disabled: #e3e3e3;
+// primary button
+$btn-primary-bg-color: #ff9a00;
+$btn-primary-color: #ffffff;
+$btn-primary-bg-color-hover: #ffad2f;
+$btn-primary-bg-color-active: #ed7b00;
+$btn-primary-color-disabled: $color-weak;
+$btn-primary-bg-color-disabled: #e3e3e3;
+// card button
+$btn-card-bg-color: #f3f3f3;
+$btn-card-color: #000000;
+$btn-card-bg-color-hover: #ffffff;
+$btn-card-border-color-hover: #68b30f;
+$btn-card-bg-color-active: #dcdcdc;
+$btn-card-color-disabled: $color-weak;
+$btn-card-bg-color-disabled: #e3e3e3;
+// client button
+$btn-client-bg-color: #5aa9ec;
+$btn-client-color: #fff;
+$btn-client-bg-color-hover: #3e9cea;
+$btn-client-bg-color-active: #3e9cea;
+$btn-client-color-disabled: #fff;
+$btn-client-bg-color-disabled: #c8c8c8;
+
+// Form
+$input-border-color: #dedede;
+$input-border-color-hover: #9a9a9a;
+$input-padding: 12px 13px 9px;
+$input-height: 16px;
+$input-color: #545454;
+$input-border-radius: 1px;
+$input-font-size: $font-size-base;
+
+// CourseCard
+$course-card-width: 222px;
+$course-card-padding: 6px;
+$course-card-default-bcolor: #e5e5e5;
+$course-card-advanced-bcolor: rgba(0,0,0,0.1);
+
+$course-card-face-height: 125px;
+$course-card-line-height: 20px;
+$course-card-face-indent: 3px;
+$course-card-face-color: #fff;
+$course-card-face-default-bcolor: #868686;
+$course-card-face-advanced-bcolor: rgba(0,0,0,0.55);
+$course-card-large-font: 14px;
+$course-card-btn-height: 26px;
+$course-card-btn-width: 76px;
+$course-card-agency-width: 108px;
+$course-card-agency-icon-size: 20px;
+
+$course-card-simple-face-width: 90px;
+$course-card-simple-face-height: 50px;
+
+// 多余变量，先注释，后续删除
+
+//$course-card-find-width: 191px;
+//$course-card-find-padding: 4px;
+//$course-card-find-face-height: 108px;
+//$course-card-find-agency-width: 77px;
